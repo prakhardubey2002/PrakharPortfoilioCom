@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300;1,400&family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+:root{
+    --primary:#ba40b9;
+    --secondary:#336bc2;
+    --tertiary:#ffffff;
+    --quartenary:#000000;
+}
+html {
+    scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+    width: 11px;
+}
+body::-webkit-scrollbar-track {
+    background: var(--secondary);
+}
+body::-webkit-scrollbar-thumb {
+    background-color: plum ;
+    border-radius: 6px;
+    border: 0px solid var(--quartenary);
+}
+body{
+    font-family: 'Poppins',sans-serif;
+    background: var(--secondary);
+    background: -webkit-linear-gradient(to right, var(--primary), var(--secondary)); 
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.sidebar{
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: var(--primary);
+    transition: all 0.4s ease;
+}
+.sidebar header{
+    font-size: 1.8rem;
+    color: var(--tertiary);
+    text-align: center;
+    line-height: 70px;
+    background: inherit;
+    user-select: none;
+}
+.sidebar header span{
+    color: red;
+}
+.sidebar ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255,255);
+    /* border-bottom: 1px solid black; */
+    transition: 0.2s all ease-in-out;
+}
+.sidebar ul li a{
+    text-decoration: none;
+}
+.sidebar ul li:hover a{
+    padding-left: 50px;
+
+}
+.sidebar ul li a i{
+    margin-right: 16px;
+}
+#check{
+    display: none;
+}
+label #btne,label #cancel{
+    position: absolute;
+    cursor: pointer;
+    /* background: var(--quartenary); */
+    
+    
+}
+label #btne{
+    position: fixed;
+    left: 5px;
+    top: 5px;
+    font-size: 35px;
+    color: white;
+    padding: 6px 12px;
+    transition: all 0.5s;
+}
+label #cancel{
+    position: fixed;
+    z-index: 1111;
+    left: -195px;
+    top: 17px;
+    font-size: 30px;
+    color: var(--tertiary);
+    padding: 4px 9px;
+    transition: all 0.5s ease-in-out; 
+}
+#check:checked ~ .sidebar{
+    left: 0;
+}
+#check:checked ~ label #btne{
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+#check:checked ~ label #cancel{
+    left: 195px;
+}
+.rex{
+    display: none;
+}
+.home{
+    width: 100vw;
+    height: 100vh;
+}
+.home nav{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    color: var(--tertiary);
+}
+.home nav .navelement{
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.home nav .navelement .logo h2{
+    font-weight: 400;
+    font-size: 2rem;
+}
+.home nav .navelement .logo h2 span{
+    color: red;
+}
+.home nav .navelement .tabs{
+    width: 40%;
+}
+.home nav .navelement .tabs ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1rem;
+
+}
+.home nav .navelement .tabs ul li a{
+    text-decoration: none;
+    color: var(--tertiary);
+}
+.home .homedata{
+    /* padding: 1rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home .homedata .cont h2{
+    color: var(--tertiary);
+    font-weight: 400;
+    font-size: 2.8rem;
+}
+.home .homedata .cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+}
+.home .homedata  .img img{
+  width: 36rem;
+}
+.home .homedata .cont h2 span{
+    color: red;
+}
+.home .homedata .cont p{
+    color: var(--tertiary);
+    line-height: 1.4rem;
+    word-spacing: 2px;
+}
+.Aboutus{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+} 
+.Aboutus .conte{
+    flex-basis: 40%;
+}
+.Aboutus .conte h2{
+    color: var(--tertiary);
+    font-size: 2.8rem;
+    font-weight: 400;
+}
+.Aboutus .conte p{
+    color: var(--tertiary);
+    word-spacing: 2px;
+    line-height: 1.4rem;
+}
+#btn{
+    outline: none;
+    padding: 12px 16px;
+    color: var(--tertiary);
+    font-weight: 400;
+    font-size: 1.2rem;
+    border: 2px solid black;
+    background: none;
+    border-radius: 2rem;
+    transition: 0.2s all ease-in-out;
+}
+#btn a{
+    color: var(--tertiary);
+    text-decoration: none;
+}
+#btn:hover{
+    transform: scale(1.1);
+    transition: 0.2s all ease-in-out;
+}
+.vision{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.vision .vise img{
+    width: 26rem;
+}
+.vision .vis{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+}
+.vision h2{
+    color: var(--tertiary);
+    font-weight: 400;
+    font-size: 2.8rem;
+    text-align: center;
+}
+.vision h2 span{
+    color: red;
+}
+.vision p{
+    color: var(--tertiary);
+    word-spacing: 2px;
+    line-height: 1.4rem;
+    font-size: 1.1rem;
+}
+.use{
+    width: 100vw;
+    height: 100vh;
+}
+.use{
+    position: relative;
+}
+.imgen img{
+    /* width: 200px; */
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    animation: fly 4s ease-in-out infinite;
+}
+@keyframes fly {
+    0% {
+      transform: translate(-50%, -46%);
+    }
+    50% {
+      transform: translate(-50%, -54%);
+    }
+    100% {
+      transform: translate(-50%, -46%);
+    }
+  }
+    .dots {
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    transform: rotate(90deg);
+  }
+  
+  .dot {
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    background: transparent;
+    border: 2px solid #5ed8b3;
+    border-radius: 50%;
+    margin: 0 18px;
+  }
+  .use .h2s {
+      width: 100vw;
+      text-align: center;
+  }
+  .use .h2s h2{
+      color: var(--tertiary);
+      font-weight: 400;
+      font-size: 2.8rem;
+  }
+  @Media only screen and (max-width: 768px){
+    .home nav{
+        display: none;
+    }
+    .home{
+        height: 135vw;
+    }
+    .rex{
+        display: block;
+    }
+    .home .homedata{
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .home .homedata .cont h2{
+        font-size: 1.8rem;
+    }
+    .home .homedata .img {
+        margin-top: 6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .home .homedata .img img{
+        max-width: 60%;
+        z-index: -2000000;
+    }
+    .home .homedata .cont{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .home .homedata .cont p{
+        width: 60vw;
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+    }
+    #btn{
+        outline: none;
+        padding: 6px 6px;
+        color: var(--tertiary);
+        font-weight: 400;
+        font-size: 0.8rem;
+        border: 2px solid black;
+        background: none;
+        border-radius: 2rem;
+        transition: 0.2s all ease-in-out;
+    }
+   .sidebar{
+    z-index: 1110;
+    height: 100vh;
+   }
+   .Aboutus{
+       display: flex;
+       flex-direction: column;
+   }
+   .Aboutus .conte .img:nth-child(1){
+       display: flex;
+       align-items: center;
+       justify-content: center;
+   }
+   .Aboutus .conte .img img{
+       max-width: 60%;
+   }
+   .Aboutus .conte{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       padding: 1rem;
+   }
+   .Aboutus .conte h2{
+       font-size: 1.8rem;
+   } 
+   .Aboutus .conte p{
+       font-size: 0.8rem;
+       line-height: 0.9rem;
+   }
+   .vision .vise .img{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+   }
+   .vision .vise .img img{
+       max-width: 60%;
+   }
+   .vision .vis{
+       display: flex;
+       flex-direction: column;
+   }
+   .vision .vis h2{
+       margin-top: 1rem;
+       font-size: 1.8rem;
+   }
+   .vision .vis p{
+       font-size: 1rem;
+   }
+   .use .h2s h2{
+       font-size: 2rem;
+   }
+  }
