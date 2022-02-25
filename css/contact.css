@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300;1,400&family=Poppins:ital,wght@0,400;0,500;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600|Open+Sans:600&display=swap');
+:root{
+    --primary:plum;
+    --secondary:#262626;
+    --tertiary:#fff;
+
+}
+::-webkit-scrollbar{
+    width: 13px;
+}
+::-webkit-scrollbar-track{
+    width: 13px;
+    background: var(--secondary);
+    border-left: 0px solid var(--tertiary);
+    border-right: 0px solid var(--tertiary);
+}
+::-webkit-scrollbar-thumb{
+    background: var(--primary);
+    width: 0%;
+    height: 35%;
+    transition: 0.5 ease;
+    cursor:pointer;
+    border-radius: 12px;
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    background: #262626;
+    overflow-x: hidden;
+}
+
+header{
+    width: 100%;
+    height: 90vh;
+}
+nav{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    color: aliceblue;
+    padding: 0% 100px;
+    margin: 10px 150px;
+    position: absolute;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-radius: 36px;
+    backdrop-filter: blur(10px);
+}
+#qwe{
+    display: none;
+}
+.logo{
+    font-size: 40px;
+    letter-spacing: 5px;
+}
+.menu a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 10px;
+    font-size: 18px;
+    transition: all 0.5s  ease;
+}
+
+.menu a:hover{
+    border-bottom: 2px var(--primary) solid;
+    transition: all 0.5s  ease;
+}
+.menu a:nth-child(5){
+    border-bottom: 2px var(--primary) solid;
+    transition: all 0.5s  ease;
+}
+section{
+  top: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 120vh;
+  padding: 20px;
+  width: 100%;
+}
+/* section::before{
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background-color: linear-gradient(#ee209b,
+  #3722ad);
+  border-radius: 100% 0% 100% 0% / 100% 0% 100% 0% ;
+} */
+section::before{
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: var(--primary);
+  border-radius: 100% 0% 100% 0% / 100% 0% 100% 0% ;
+  z-index: -100;
+}
+.container{
+  position: relative;
+  z-index: 1000;
+  width: 100%;
+  max-width: 1000px;
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  overflow: hidden;
+  backdrop-filter: blur(20px);
+}
+/* .container::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -40%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+  transform: skewX(-15deg);
+} */
+.container h2{
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.container .row100{
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+}
+.container .row100 .col{
+  position: relative;
+  width: 100%;
+  padding: 0 10px;
+  margin: 30px 0 20px;
+}
+.container .row100 .col .inputBox{
+  position: relative;
+  width: 100%;
+  height: 40px;
+  color: white;
+}
+.container .row100 .col .inputBox input,
+.container .row100 .col .inputBox textarea{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  box-shadow: none;
+  outline: none;
+  font-size: 15px;
+  padding: 0 10px;
+  z-index: 1;
+  color: black;
+  border: 0;
+  display: block;
+}
+.container .row100 .col .inputBox .text{
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 40px;
+  font-size: 18px;
+  padding: 0 10px;
+  display: block;
+  transition: 0.5s;
+  /* pointer-events: none; */
+}
+.container .row100 .col .inputBox input:focus + .text,
+.container .row100 .col .inputBox input:valid + .text,
+.container .row100 .col .inputBox textarea:focus + .text,
+.container .row100 .col .inputBox textarea:valid + .text
+{
+  top: -35px;
+  left: -10px;
+
+}
+.container .row100 .col .inputBox .line{
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: white;
+  transition: 0.5s;
+  border-radius: 2px;
+  pointer-events: none;
+}
+.container .row100 .col .inputBox input:focus ~ .text,
+.container .row100 .col .inputBox input:valid ~ .text{
+  height: 100%;
+
+}
+.container .row100 .col .inputBox .textarea{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 10px  0;
+}
+.container .row100 .col .inputBox textarea:focus ~ .text,
+.container .row100 .col .inputBox textarea:valid ~ .text{
+  height: 100%;
+
+}
+.container .row100 .col  input[type="submit"]{
+  border: none;
+  padding: 10px 40px;
+  cursor: pointer;
+  outline: none;
+  background: #fff;
+  color: black;
+  font-weight: 600;
+  font-size: 18px;
+}
+.container .row100 .col  button{
+  border: none;
+  padding: 10px 40px;
+  cursor: pointer;
+  outline: none;
+  background: #fff;
+  color: black;
+  font-weight: 600;
+  font-size: 18px;
+}
+#mob{
+  display: none;
+}
+.fest{
+  display: none;
+}
+.sidebar{
+  display: none;
+  position: fixed;
+  width: 200px;
+  left: -240px;
+  height: 100%;
+  background: #1e1e1e;
+  transition: all .5s ease;
+  z-index: 1000;
+  border-radius: 2rem;
+}
+.sidebar a{
+  display: block;
+  height: 50px;
+  width: 100%;
+  color: white;
+  line-height: 65px;
+  padding-left: 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255,255,255,.1);
+  border-left: 5px solid transparent;
+  font-family: 'Open Sans', sans-serif;
+  transition: all .5s ease;
+}
+.sidebar a:nth-child(6){
+    border-bottom: 0;
+}
+.sidebar a:nth-child(1){
+  border-top: 0;
+}
+
+
+.sidebar a i{
+  font-size: 23px;
+  margin-right: 16px;
+}
+.sidebar a span{
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+#check{
+  display: none;
+}
+label #btn,label #cancel{
+  position: absolute;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid #262626;
+  margin: 15px 30px;
+  font-size: 29px;
+  background: #262626;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  line-height: 45px;
+  transition: all .5s ease;
+}
+label #cancel{
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked ~ .sidebar{
+  left: 0;
+}
+#check:checked ~ label #btn{
+  margin-left: 245px;
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked ~ label #cancel{
+  margin-left: 245px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile{
+  /* display: block; */
+  position: absolute;
+  width: 70vw;
+  top: 10%;
+}
+
+
+.menu a{
+  border-left: 0px;
+}
+footer{
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer h3{
+  color: white;
+  font-weight: 200;
+  padding: 1rem;
+}
+footer h3 a{
+  text-decoration: none;
+  color: plum;
+  cursor: pointer;
+}
+@media only screen and (max-width:500px){
+
+    header{
+        width:100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+    }
+    header .h-text{
+        top: 30%;
+        width: 70%;
+    }
+    header .h-text p{
+        font-size: 0.6rem;
+    }
+    header .h-text h2{
+        font-size: 0.8rem;
+    }
+    header .h-text h1{
+        font-size: 0.6rem;
+    }
+    #qwe{
+        display: block;
+        color: white;
+        padding: 1rem;
+
+    }
+    header>nav{
+        display: none;
+    }
+}
+
+
+@media(max-width : 860px){
+  #mob{
+    display:block;
+  }
+  .mobile .cont h2{
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+  .mobile .cont .inpu{
+    /* height: 10%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0.4rem;
+  }
+  .mobile .cont button{
+    margin-left: 1.2rem;
+    padding: 8px 18px;
+    font-size: 1.2rem;
+    outline: none;
+    font-weight: 500;
+    color: var(--tertiary);
+    background-color: var(--primary);
+    border: 1px solid var(--secondary);
+  }
+  .mobile .cont .inpu label{
+    color: var(--tertiary);
+    font-size: 1.1rem;
+  }
+  .mobile .cont .inpu input{
+    outline: none;
+    background: transparent;
+    background: transparent;
+    box-shadow: none;
+    outline: none;
+    font-size: 1.6rem;
+    padding: 8px 10px;
+    color: var(--tertiary);
+    border: 0;
+    border-bottom: 1px solid #ccc;
+  }
+  .mobile .cont .inpu input::placeholder{
+    font-size: 1.1rem;
+    color: var(--tertiary);
+  }
+  .mobile{
+    /* display: block; */
+    position: absolute;
+    width: 70vw;
+    top: 5%;
+  }
+  .mobile .cont{ 
+    position:absolute;
+    z-index: 1000;
+    width: 100%;
+    height: 95vh;
+    max-height: auto;
+    padding: 32px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    /* overflow: hidden; */
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+ section{
+   overflow: hidden;
+ } 
+  nav{
+    display: none;
+}  
+  .fest{
+        display: block;
+        z-index: 20;
+    }
+    .sidebar{
+      display: block;
+      height: auto;
+      width: 40px;
+      left: 0;
+      margin: 20px 0;
+      /* z-index: 49; */
+    }
+    #btn,#cancel{
+      display: none;
+    }
+    .sidebar span{
+      position: absolute;
+      margin-left: 23px;
+      opacity: 0;
+      visibility: hidden;
+    }
+    .sidebar a{
+      height: 60px;
+    }
+    .sidebar a i{
+      margin-left: -5px;
+    }
+    a:hover {
+      width: 200px;
+      background: inherit;
+    }
+    .sidebar a:hover span{
+      opacity: 1;
+      visibility: visible;
+    }
+    a:nth-child(6){
+      border-left: 5px solid var(--primary);
+      color: var(--primary);
+    }
+    .container{
+      position: absolute;
+      top: 5%;
+      max-width: 70vw;
+      padding: 10px;
+      z-index: -4;
+    }
+    .container{
+      display: none;
+    }
+  }
+  

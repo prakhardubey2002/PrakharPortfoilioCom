@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="shortcut icon" type="image/png" href="images/pra.png"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="fest">
+        <input type="checkbox" id="check">
+        <label for="check" >
+            <i class="fa fa-bars" id="btn"></i>
+            <i class="fa fa-times" id="cancel"></i>
+        </label>
+        <div class="sidebar">
+            <!-- <header>My Menu</header> -->
+            <a href="index.html" class="active">
+              <i class="fa fa-qrcode"></i>
+              <span>Home</span>
+            </a>
+            <a href="Projects.html">
+              <i class="fa fa-bolt"></i>
+              <span>Project</span>
+            </a>
+            <a href="Certificates.html">
+              <i class="fa fa-briefcase"></i>
+              <span>Certificate</span>
+            </a>
+            <a href="Aboutme.html">
+              <i class="fa fa-question-circle"></i>
+              <span>About</span>
+            </a>
+            <a href="Blog.html">
+              <i class="fa fa-th-large"></i>
+              <span>Blog</span>
+            <a href="Contactme.html">
+              <i class="fa fa-envelope"></i>
+              <span>Contact</span>
+            </a>
+        </div>
+    </div>
+    <nav class="rellax" data-rellax-speed="-3">
+        <div class="logo">Portfolio</div>
+        
+        <div class="menu" >
+            <a href="index.html">Home</a>
+            <a href="Aboutme.html">About me</a>
+            <a href="Certificates.html">Certificate</a>
+            <a href="Projects.html">Projects</a>
+            <a href="Contactme.html">Contact me</a>
+            <a href="Blog.html">Blogs</a>
+        </div>
+    </nav>
+  <section>
+    <form class="container" action="https://formspree.io/f/xlezbrlq"
+    method="POST" >
+      <h2>Contact me</h2>
+   
+    <div class="row100">
+      <div class="col">
+        <div class="inputBox">
+          <input type="text"  name="FirstName" required="required">
+          <span class="text">First Name </span>
+          <span class="line"></span>
+        </div>
+      </div>
+      <div class="col">
+        <div class="inputBox">
+          <input type="text"  name="LastName" required="required">
+          <span class="text">Last Name </span>
+          <span class="line"></span>
+        </div>
+      </div>
+    </div>
+    <div class="row100">
+      <div class="col">
+        <div class="inputBox">
+          <input type="text"  name="Email" required="required">
+          <span class="text">Email</span>
+          <span class="line"></span>
+        </div>
+      </div>
+      <div class="col">
+        <div class="inputBox">
+          <input type="text"  name="Mobile No" required="required">
+          <span class="text">Mobile No.</span>
+          <span class="line"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row100">
+      <div class="col">
+        <div class="inputBox textarea">
+          <textarea  name="Message" required="required"></textarea>
+          <span class="text">Type Your Message</span>
+          <span class="line"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row100">
+      <div class="col">
+       <button type="submit" >Send</button>
+      </div>
+    </div>
+  </form>
+  <form id="mob" class="mobile" action="https://formspree.io/f/xlezbrlq"
+  method="POST">
+    <div class="cont">
+      <h2>Contact me</h2>
+      <div class="inpu">
+        <!-- <label>First Name</label> -->
+        <input type="text" placeholder="First Name" name="FirstName" >
+      </div>
+      <div class="inpu">
+        <!-- <label>First Name</label> -->
+        <input type="text" placeholder="Last Name" name="lastName">
+      </div>
+      <div class="inpu">
+        <!-- <label>Last Name</label> -->
+        <input type="text" placeholder="Mobile No" name="MobileNo" >
+      </div>
+      <div class="inpu">
+        <!-- <label>Email</label> -->
+        <input type="email" placeholder="Email" name="email" >
+      </div>
+      <div class="inpu">
+        <!-- <label>Mobile No</label> -->
+        <input type="text" placeholder="Description" name="Description" >
+      </div>
+    <span> <button type="submit" >Send</button></span> 
+    </div>
+  </form>
+  </section>
+  <footer>
+    <h3> Made with &#10084 by <a href="https://www.linkedin.com/in/prakhar-dubey-3790b81b7/">Prakhar</a></h3>
+  </footer>
+</body>
+</html>
